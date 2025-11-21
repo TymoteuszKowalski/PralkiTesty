@@ -28,4 +28,10 @@ public class Plecak {
 
         return ' ';
     }
+
+    public int priorytetElementu(char z){
+        //TODO
+
+        return 3;
+    }
 }

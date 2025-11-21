@@ -43,15 +43,16 @@ public class PlecakTest {
     }
 
     @Test
-    public void zwrociZleSpakowanyElement2(){
+    public void zwrociPriorytetElementu1(){
         //given
+        char znak = 'c';
         String z = "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL";
         Plecak plecak = new Plecak(z);
 
         //when
-        char element = plecak.zleSpakowanyElement2();
+        int priorytet = plecak.priorytetElementu(znak);
 
         //then
-        Assertions.assertEquals('L', element);
+        Assertions.assertEquals(3,priorytet);
     }
 }
