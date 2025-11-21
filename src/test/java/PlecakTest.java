@@ -16,15 +16,42 @@ public class PlecakTest {
         Assertions.assertEquals("vJrwpWtwJgWr", k1);
     }
 
+    @Test
     public void zwrociZawartoscKomory1b(){
         //given
         String z = "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL";
         Plecak plecak = new Plecak(z);
 
         //when
-        String k1 = plecak.zawartoscKomory1();
+        String k2 = plecak.zawartoscKomory2();
 
         //then
-        Assertions.assertEquals("jqHRNqRjqzjGDLGL", k1);
+        Assertions.assertEquals("jqHRNqRjqzjGDLGL", k2);
+    }
+
+    @Test
+    public void zwrociZleSpakowanyElement1(){
+        //given
+        String z = "vJrwpWtwJgWrhcsFMMfFFhFp";
+        Plecak plecak = new Plecak(z);
+
+        //when
+        char element = plecak.zleSpakowanyElement1();
+
+        //then
+        Assertions.assertEquals('p', element);
+    }
+
+    @Test
+    public void zwrociZleSpakowanyElement2(){
+        //given
+        String z = "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL";
+        Plecak plecak = new Plecak(z);
+
+        //when
+        char element = plecak.zleSpakowanyElement2();
+
+        //then
+        Assertions.assertEquals('L', element);
     }
 }
